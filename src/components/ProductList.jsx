@@ -1,6 +1,6 @@
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { addToCart, selectCartItems } from '../redux/CartSlice.jsx'
+import { addItem } from '../redux/CartSlice.jsx'
 
 const placeholder = (text) => `https://via.placeholder.com/150?text=${encodeURIComponent(text)}`
 
@@ -68,7 +68,7 @@ export default function ProductList({ navigate }) {
                     <button
                       className="btn"
                       disabled={inCart(p.id)}
-                      onClick={() => dispatch(addToCart(p))}
+                      onClick={() => dispatch(addItem(p))}
                     >
                       {inCart(p.id) ? 'Added' : 'Add to Cart'}
                     </button>
