@@ -20,7 +20,7 @@ export default function App() {
     <>
       {!showProducts && !showCart && (
         <div className="landing-container">
-          <h1>Paradise Nursery</h1>
+          <h1>Welcome to Paradise Nursery</h1>
           <button className="get-started-btn" onClick={() => setShowProducts(true)}>
             Get Started
           </button>
